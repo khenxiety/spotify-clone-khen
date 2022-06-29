@@ -1,0 +1,39 @@
+main{
+    height: 100vh;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container{
+    height: 100%;
+    display: flex;
+    
+}
+
+
+.bottom-bar
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    
+}
+.mobile-sidebar{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 468px) {
+    .sidebar{
+        display: none;
+    }
+    .mobile-sidebar{
+        display: block;
+    }
+}
+    

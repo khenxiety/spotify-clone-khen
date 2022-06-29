@@ -1,0 +1,352 @@
+<section class="home">
+  <header class="header" (scroll)="onscroll()" [ngClass]="navbarfixed ? 'fixed' : 'nofixed'">
+    <div class="buttons" style="display: flex; gap: 20px">
+      <button type="button" class="button-transparent">
+        <svg
+          width="40"
+          height="auto"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="32" cy="32" r="32" fill="black" />
+          <rect
+            width="1.96235"
+            height="28.3925"
+            rx="0.981177"
+            transform="matrix(0.691814 0.722076 -0.691814 0.722076 39.6423 11)"
+            fill="white"
+          />
+          <rect
+            width="1.96235"
+            height="28.3875"
+            rx="0.981177"
+            transform="matrix(0.691814 -0.722076 0.691814 0.722076 20.0034 31.502)"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <button type="button" class="button-transparent">
+        <svg
+          width="40"
+          height="auto"
+          style="transform: rotate(180deg)"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="32" cy="32" r="32" fill="black" />
+          <rect
+            width="1.96235"
+            height="28.3925"
+            rx="0.981177"
+            transform="matrix(0.691814 0.722076 -0.691814 0.722076 39.6423 11)"
+            fill="white"
+          />
+          <rect
+            width="1.96235"
+            height="28.3875"
+            rx="0.981177"
+            transform="matrix(0.691814 -0.722076 0.691814 0.722076 20.0034 31.502)"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="right-buttons">
+      <!-- <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div> -->
+    </div>
+</header>
+  <div class="featured" id="hero-featured">
+    <img src="/assets/featured.png" alt="" />
+  </div>
+  <div class="home-content">
+    <header class="header-text">
+      
+      <h1 class="text-white h1-responsive ">Top listens</h1>
+    </header>
+    <div class="container-fluid">
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-3">
+        
+        <div class="col mt-4" *ngFor="let playlist of song">
+          <div class="spot-card" (pointerenter)="changeColor(playlist.color)">
+            <div class="img">
+              <img src="{{ playlist.img }}" alt="" />
+            </div>
+            <div class="text">
+              <h3>{{ playlist.name }}</h3>
+            </div>
+
+            <div class="play" id="play">
+              <button class="rkmd-btn btn-fab">
+                <svg
+                  width="25"
+                  style="margin-left: 5px"
+                  height="auto"
+                  viewBox="0 0 51 58"
+                  fill="#fff"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M47.475 33.3562L7.70625 56.4312C4.33125 58.3875 0 56.0187 0 52.075V5.92498C0 1.98748 4.325 -0.387523 7.70625 1.57498L47.475 24.65C48.2427 25.0882 48.8809 25.7218 49.3248 26.4863C49.7687 27.2508 50.0025 28.1191 50.0025 29.0031C50.0025 29.8871 49.7687 30.7554 49.3248 31.5199C48.8809 32.2844 48.2427 32.918 47.475 33.3562V33.3562Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-content">
+    <header class="header-text">
+      <h1 class="text-white">Jump back in</h1>
+    </header>
+    <div class="container-fluid mt-4">
+      
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6">
+
+        <!-- <div class="col my-4 column" *ngFor="let playlist of song">
+          <div class="cards2">
+            <div class="img2" style="position: relative">
+              <img src="{{ playlist.img }}" class="shadowed rounded" height="auto" width="100%" alt="" />
+
+              <div class="button-absolute">
+                <button class="rkmd-btn btn-fab">
+                  <svg
+                    width="25"
+                    style="margin-left: 5px"
+                    height="auto"
+                    viewBox="0 0 51 58"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.475 33.3562L7.70625 56.4312C4.33125 58.3875 0 56.0187 0 52.075V5.92498C0 1.98748 4.325 -0.387523 7.70625 1.57498L47.475 24.65C48.2427 25.0882 48.8809 25.7218 49.3248 26.4863C49.7687 27.2508 50.0025 28.1191 50.0025 29.0031C50.0025 29.8871 49.7687 30.7554 49.3248 31.5199C48.8809 32.2844 48.2427 32.918 47.475 33.3562V33.3562Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="cards2-title text-white">
+              <h3>{{ playlist.name }}</h3>
+              <p>
+                {{ playlist.name }}. The <br />
+                essential tracks all in.. 
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="slider">
+          <div class="slider-card"  *ngFor="let playlist of song">
+            <div class="img2" style="position: relative">
+              <img src="{{ playlist.img }}" class="shadowed rounded" height="auto" width="100%" alt="" />
+
+              <div class="button-absolute">
+                <button class="rkmd-btn btn-fab">
+                  <svg
+                    width="25"
+                    style="margin-left: 5px"
+                    height="auto"
+                    viewBox="0 0 51 58"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.475 33.3562L7.70625 56.4312C4.33125 58.3875 0 56.0187 0 52.075V5.92498C0 1.98748 4.325 -0.387523 7.70625 1.57498L47.475 24.65C48.2427 25.0882 48.8809 25.7218 49.3248 26.4863C49.7687 27.2508 50.0025 28.1191 50.0025 29.0031C50.0025 29.8871 49.7687 30.7554 49.3248 31.5199C48.8809 32.2844 48.2427 32.918 47.475 33.3562V33.3562Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="cards2-title text-white">
+              <h3>{{ playlist.name }}</h3>
+              <p>
+                {{ playlist.name }}. The <br />
+                essential tracks all in.. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="home-content">
+    <header class="header-text">
+      <h1 class="text-white">Best of artists</h1>
+    </header>
+    <div class="container-fluid mt-4">
+      
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6">
+
+        <!-- <div class="col my-4 column" *ngFor="let playlist of song">
+          <div class="cards2">
+            <div class="img2" style="position: relative">
+              <img src="{{ playlist.img }}" class="shadowed rounded" height="auto" width="100%" alt="" />
+
+              <div class="button-absolute">
+                <button class="rkmd-btn btn-fab">
+                  <svg
+                    width="25"
+                    style="margin-left: 5px"
+                    height="auto"
+                    viewBox="0 0 51 58"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.475 33.3562L7.70625 56.4312C4.33125 58.3875 0 56.0187 0 52.075V5.92498C0 1.98748 4.325 -0.387523 7.70625 1.57498L47.475 24.65C48.2427 25.0882 48.8809 25.7218 49.3248 26.4863C49.7687 27.2508 50.0025 28.1191 50.0025 29.0031C50.0025 29.8871 49.7687 30.7554 49.3248 31.5199C48.8809 32.2844 48.2427 32.918 47.475 33.3562V33.3562Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="cards2-title text-white">
+              <h3>{{ playlist.name }}</h3>
+              <p>
+                {{ playlist.name }}. The <br />
+                essential tracks all in.. 
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="slider">
+          <div class="slider-card"  *ngFor="let playlist of song">
+            <div class="img2" style="position: relative">
+              <img src="{{ playlist.img }}" class="shadowed rounded" height="auto" width="100%" alt="" />
+
+              <div class="button-absolute">
+                <button class="rkmd-btn btn-fab">
+                  <svg
+                    width="25"
+                    style="margin-left: 5px"
+                    height="auto"
+                    viewBox="0 0 51 58"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.475 33.3562L7.70625 56.4312C4.33125 58.3875 0 56.0187 0 52.075V5.92498C0 1.98748 4.325 -0.387523 7.70625 1.57498L47.475 24.65C48.2427 25.0882 48.8809 25.7218 49.3248 26.4863C49.7687 27.2508 50.0025 28.1191 50.0025 29.0031C50.0025 29.8871 49.7687 30.7554 49.3248 31.5199C48.8809 32.2844 48.2427 32.918 47.475 33.3562V33.3562Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="cards2-title text-white">
+              <h3>{{ playlist.name }}</h3>
+              <p>
+                {{ playlist.name }}. The <br />
+                essential tracks all in.. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="home-content">
+    <header class="header-text">
+      <h1 class="text-white">Uniquely yours</h1>
+    </header>
+    <div class="container-fluid mt-4">
+      
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6">
+
+        <!-- <div class="col my-4 column" *ngFor="let playlist of song">
+          <div class="cards2">
+            <div class="img2" style="position: relative">
+              <img src="{{ playlist.img }}" class="shadowed rounded" height="auto" width="100%" alt="" />
+
+              <div class="button-absolute">
+                <button class="rkmd-btn btn-fab">
+                  <svg
+                    width="25"
+                    style="margin-left: 5px"
+                    height="auto"
+                    viewBox="0 0 51 58"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.475 33.3562L7.70625 56.4312C4.33125 58.3875 0 56.0187 0 52.075V5.92498C0 1.98748 4.325 -0.387523 7.70625 1.57498L47.475 24.65C48.2427 25.0882 48.8809 25.7218 49.3248 26.4863C49.7687 27.2508 50.0025 28.1191 50.0025 29.0031C50.0025 29.8871 49.7687 30.7554 49.3248 31.5199C48.8809 32.2844 48.2427 32.918 47.475 33.3562V33.3562Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="cards2-title text-white">
+              <h3>{{ playlist.name }}</h3>
+              <p>
+                {{ playlist.name }}. The <br />
+                essential tracks all in.. 
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="slider">
+          <div class="slider-card"  *ngFor="let playlist of uniquely">
+            <div class="img2" style="position: relative">
+              <img src="{{ playlist.img }}" class="shadowed rounded" height="auto" width="100%" alt="" />
+
+              <div class="button-absolute">
+                <button class="rkmd-btn btn-fab">
+                  <svg
+                    width="25"
+                    style="margin-left: 5px"
+                    height="auto"
+                    viewBox="0 0 51 58"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.475 33.3562L7.70625 56.4312C4.33125 58.3875 0 56.0187 0 52.075V5.92498C0 1.98748 4.325 -0.387523 7.70625 1.57498L47.475 24.65C48.2427 25.0882 48.8809 25.7218 49.3248 26.4863C49.7687 27.2508 50.0025 28.1191 50.0025 29.0031C50.0025 29.8871 49.7687 30.7554 49.3248 31.5199C48.8809 32.2844 48.2427 32.918 47.475 33.3562V33.3562Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="cards2-title text-white">
+              <h3>{{ playlist.title }}</h3>
+              <p>
+                {{ playlist.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

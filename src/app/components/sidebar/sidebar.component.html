@@ -1,0 +1,90 @@
+<div class="sidebar">
+    <div class="sidebar-header">
+        <div class="dropdown">
+        <button
+          class="button-transparent"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"/></svg>
+
+        </button>
+        <ul class="dropdown-menu " >
+          <li class="my-2"><a class="text-white" href="#">New Playlist</a></li>
+          <li class="my-2"><a class="text-white" href="#">Settings</a></li>
+          <li class="my-2"><a class="text-white"  href="#">About</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="nav-content" >
+        <div class="nav my-4">
+            <ul class="nav-list">
+                <li routerLink="/home" routerLinkActive="active">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="auto" viewBox="0 0 24 24"><path fill="#ffffff" d="M6.64373233,18.7821107 L6.64373233,15.7152449 C6.64371685,14.9380902 7.27567036,14.3067075 8.05843544,14.3018198 L10.9326107,14.3018198 C11.7188748,14.3018198 12.3562677,14.9346318 12.3562677,15.7152449 L12.3562677,15.7152449 L12.3562677,18.7732212 C12.3562498,19.4472781 12.9040221,19.995083 13.5829406,20 L15.5438266,20 C16.4596364,20.0023291 17.3387522,19.6427941 17.9871692,19.0007051 C18.6355861,18.3586161 19,17.4867541 19,16.5775231 L19,7.86584638 C19,7.13138763 18.6720694,6.43471253 18.1046183,5.96350064 L11.4429783,0.674268354 C10.2785132,-0.250877524 8.61537279,-0.22099178 7.48539114,0.745384082 C7.48539114,0.745384082 0.967012253,5.96350064 0.967012253,5.96350064 C0.37274068,6.42082162 0.0175522924,7.11956262 0,7.86584638 L0,16.5686336 C0,18.463707 1.54738155,20 3.45617342,20 L5.37229029,20 C5.69917279,20.0023364 6.01348703,19.8750734 6.24547302,19.6464237 C6.477459,19.417774 6.60792577,19.1066525 6.60791706,18.7821107 L6.64373233,18.7821107 Z" transform="translate(2.5 2)"/></svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="auto" viewBox="0 0 32 32"><path class="nav-svg"  d="M28.5,9.14l-12-7a1,1,0,0,0-1,0l-12,7A1,1,0,0,0,3,10V28a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V21h4v7a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V10A1,1,0,0,0,28.5,9.14ZM27,27H20V20a1,1,0,0,0-1-1H13a1,1,0,0,0-1,1v7H5V10.57L16,4.16l11,6.41Z"/></svg>
+                    <a >Home</a>
+                </li>
+                <li routerLink="/search" routerLinkActive="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="auto" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="search"><rect width="24" height="24" opacity="0"/><path class="nav-svg" d="M20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"/></g></g></svg>
+    
+                    <a >Search</a>
+                </li>
+    
+                <li routerLink="/library" routerLinkActive="active">
+                    <svg style="margin-left: 3.5px;" width="27" height="auto" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="lib" y="1" width="7.18976" height="63" rx="3.59488" fill="white"/>
+                        <rect class="lib" x="17.9744" y="1" width="7.18976" height="63" rx="3.59488" fill="white"/>
+                        <rect class="lib" x="35.9487" y="1" width="7.18976" height="63" rx="3.59488" fill="white"/>
+                        <rect class="lib" x="56.3198" y="18" width="7.18976" height="46" rx="3.59488" fill="white"/>
+                        <rect class="lib" width="6.62165" height="31.4749" rx="3.31083" transform="matrix(0.767773 -0.640722 0.767773 0.640722 34.7505 4.24261)" fill="white"/>
+                        <rect class="lib" x="35.9487" y="64" width="6" height="27.5607" rx="3" transform="rotate(-90 35.9487 64)" fill="white"/>
+                        </svg>
+                        
+                    <a >Your Library</a>
+                
+                </li>
+    
+            </ul>
+    
+            <ul class="nav-list2">
+                <li>
+                    <svg width="31" height="auto" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="64" rx="8" fill="#D9D9D9"/>
+                        <rect x="30" y="20" width="4" height="24" rx="2" fill="black"/>
+                        <rect x="20" y="34" width="4" height="24" rx="2" transform="rotate(-90 20 34)" fill="black"/>
+                        </svg>
+                        
+                        
+                    <a href="">Create Playlist</a>
+                </li>
+                <li>
+                    <svg width="31" height="auto" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="64" height="64" rx="8" fill="white"/>
+                        <rect width="64" height="64" rx="8" fill="url(#paint0_linear_15_29)"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M32 24.1025C38.6572 16.8033 55.3016 29.5761 32 46C8.69837 29.5777 25.3428 16.8033 32 24.1025Z" fill="white"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_15_29" x1="2.5" y1="3" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4F1CF3"/>
+                        <stop offset="1" stop-color="#4F1CF3" stop-opacity="0"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+                    <a href="">Likes Songs</a>
+                </li>
+    
+            </ul>
+    
+        </div>
+
+    </div>
+
+
+    <div class="ghost-line">
+        
+    </div>
+
+</div>

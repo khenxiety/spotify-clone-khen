@@ -1,0 +1,71 @@
+*{
+    transition: .3s all ease;
+}
+p,h3,h4,h4{
+
+    margin: 0;
+    padding: 0;
+}
+.mob-bar{
+    padding-top: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+.bar{
+    background-color: #31373f;
+    border-radius: 5px;
+   
+}
+.play{
+    padding: .4em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .text-wrapper{
+        color: white;
+    }
+}
+.music-controls{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.play-pause{
+    transition: .3s all ease;
+
+    .play{
+        display: inline;
+        svg{
+
+        }
+        &:hover{
+            svg{
+                transform: scale(1.1);
+            }
+        }
+
+        &:active{
+            svg{
+                transform: scale(1);
+            }
+        }
+    }
+    .pause{
+        display: inline;
+        svg{
+            transform: scale(1.1);
+
+        }
+        &:hover{
+            svg{
+                transform: scale(1.2);
+            }
+        }
+
+        &:active{
+            svg{
+                transform: scale(1);
+            }
+        }
+    }
+}
